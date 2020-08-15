@@ -1,0 +1,40 @@
+
+  <ion-header>
+    Ger's Garage
+    <ion-icon name="build-outline"></ion-icon>
+  </ion-header>
+
+  <div class="container">
+    <div class="info-container">
+      <div class="title">New Booking</div>
+      <ion-select (ionChange)='make($event)' placeholder="Select Make">
+        <ion-select-option *ngFor='let make of makes'>{{make.name}}</ion-select-option>
+      </ion-select>
+      <ion-select (ionChange)='type($event)' placeholder="Select Type">
+        <ion-select-option *ngFor='let type of types'>{{type}}</ion-select-option>
+      </ion-select>
+      <ion-input #license placeholder="License"></ion-input>
+      <ion-button (click)='create(license.value)' >SUBMIT</ion-button>
+       <hr>
+    </div>
+  </div>
+  
+<ion-toolbar class='toolbar'>
+  <ion-buttons> 
+  <a routerLink="/booking">  
+  <ion-button>
+    <ion-icon name="book-outline"></ion-icon>
+  </ion-button>
+  </a>
+  <a routerLink="/personal-information">
+  <ion-button>
+    <ion-icon name="person-outline"></ion-icon>
+  </ion-button>
+  </a>
+  <ion-button>
+    <a routerLink="/store">
+      <ion-icon name="pricetag-outline"></ion-icon>
+    </a>
+  </ion-button>
+  </ion-buttons>
+  </ion-toolbar>

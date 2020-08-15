@@ -1,0 +1,52 @@
+
+  <ion-header>
+    Ger's Garage
+    <ion-icon name="build-outline"></ion-icon>
+  </ion-header>
+
+
+
+
+  <div class="container">
+    <div class="info-container">
+      <div class="title">Financial Details</div>
+      <div class="items-container">
+        <ion-list>
+          <ion-item *ngFor="let entry of items">
+            <div>Item: {{entry.product}}</div>
+            <ion-input #cost type='number' class="sign-up-input" #cost placeholder="Cost: {{entry.price}}"></ion-input>
+            <ion-button (click)='save(entry,cost.value)'>EDIT</ion-button>
+            <ion-button (click)='delete(entry)'>DELETE</ion-button>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </div>
+
+
+  <ion-toolbar class='toolbar'>
+    <ion-buttons> 
+    <a routerLink="/admin-bookings">  
+    <ion-button>
+      <ion-icon name="book-outline"></ion-icon>
+    </ion-button>
+    </a>
+    <a routerLink="/admin-mechanics">
+    <ion-button>
+      <ion-icon name="person-outline"></ion-icon>
+    </ion-button>
+    </a>
+    <a routerLink="/admin-home">
+      <ion-button>
+        <ion-icon name="card-outline"></ion-icon>
+      </ion-button>
+      </a>
+    <ion-button>
+      <a routerLink="/admin-store">
+        <ion-icon name="pricetag-outline"></ion-icon>
+      </a>
+    </ion-button>
+    </ion-buttons>
+    </ion-toolbar>
+
+    

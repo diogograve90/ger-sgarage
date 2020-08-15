@@ -1,0 +1,70 @@
+ion-buttons{
+    display: flex;
+    justify-content: space-around;
+    padding: 2% 0;
+}
+ion-toolbar{
+    border-top: 2px solid rgb(37, 37, 37);
+    --background:  rgb(37, 37, 37);;
+}
+ion-button{
+    height: fit-content;
+}
+ion-icon{
+    color: white;
+    font-size: 48px;
+}
+ion-header ion-icon{
+    height: 60%;
+
+}
+ion-header{
+    display: flex;
+    font-size: 24px;
+    height: 7.5vh;
+    background: rgb(37, 37, 37);
+    color: white;
+    padding: 0 5%;
+    align-items: center;
+}
+.container{
+    height: 100%;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-container{
+    padding: 5%;
+    display: flex;
+    width: 90%;
+    height: fit-content;
+    background-color: white;
+    border: 1px solid rgb(149, 149, 149);
+    border-radius: 20px;
+    flex-direction: column;
+}
+.title{
+    font-size: 24px;
+    border-bottom: 1px solid rgb(149, 149, 149);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%
+}
+ion-input{
+    --padding-start: 2%;
+    border: 1px solid rgb(37, 37, 37);
+    border-radius: 5px;
+    margin: 2% 0;
+}
+
+.container ion-button{
+    font-size:20px;
+    margin: 3% 0;
+    width: 100%;
+    --border-radius: 20px; 
+    --padding-top: 4%;
+    --padding-bottom:4%;
+    --background:  rgb(37, 37, 37);
+}

@@ -1,0 +1,36 @@
+.demo{
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 20px;
+    flex-direction: column;
+    background-color: rgba($color: #ffffff, $alpha: 0.85);
+    border-radius: 5px;
+    margin-top: 20%;
+}
+.sign-up-input{
+    border: 2px solid gray;
+    width: fit-content;
+    margin: 1px;
+    border-radius: 5px;
+    margin: 2% 0;
+}
+.sign-up-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://image.freepik.com/vetores-gratis/icones-do-servico-de-carro-mecanico_24877-152.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.sign-up-button{
+    --background:rgb(49, 49, 63);
+
+}
+.container-button{
+    margin: 5% 0;
+    display: flex
+}

@@ -1,0 +1,50 @@
+
+  <ion-header>
+    Ger's Garage
+    <ion-icon name="build-outline"></ion-icon>
+  </ion-header>
+
+
+
+<div class="container">
+  <div class="info-container">
+    <div class="title" *ngIf="!cart">Store</div>
+    <div class="title" *ngIf="cart">Cart</div>
+    <div class="items-container">
+      <ion-list *ngIf="!cart">
+        <ion-item *ngFor="let entry of items">
+          <ion-label>Name: {{entry.val}} Price: {{entry.price}}</ion-label>
+          <ion-checkbox slot="end" (click)='setChecked(entry)'></ion-checkbox>
+        </ion-item>
+      </ion-list>
+      <ion-list *ngIf="cart">
+        <ion-item *ngFor="let entry of checkedValues">
+          <ion-label>{{entry.val}} </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+    <ion-button *ngIf="!cart" (click)="sendItems()">SEND TO CART</ion-button>
+    <ion-button *ngIf="cart" (click)="buy()">BUY</ion-button>
+     <hr>
+  </div>
+</div>
+
+<ion-toolbar class='toolbar'>
+<ion-buttons> 
+<a routerLink="/booking">  
+<ion-button>
+  <ion-icon name="book-outline"></ion-icon>
+</ion-button>
+</a>
+<a routerLink="/personal-information">
+<ion-button>
+  <ion-icon name="person-outline"></ion-icon>
+</ion-button>
+</a>
+<ion-button>
+  <a routerLink="/store">
+    <ion-icon name="pricetag-outline"></ion-icon>
+  </a>
+</ion-button>
+</ion-buttons>
+</ion-toolbar>

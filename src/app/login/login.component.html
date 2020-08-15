@@ -1,0 +1,13 @@
+<ion-content>
+  <div class="login-container">
+  <form class="demo">
+  <ion-input #login class="login-input" placeholder="Login"></ion-input>
+  <ion-input #pw type="password" class="login-input" placeholder="Password"></ion-input>
+  <div class="container-button">
+  <ion-button class="login-button" (click)="sendLoginInformation(login.value,pw.value)">ENTER AS USER</ion-button>
+    <a routerLink="/sign-up">  <ion-button class="login-button" (click)="sendLoginInformation(login,password)">SIGN UP</ion-button> </a>
+  <ion-button class="login-button" (click)="sendLoginInformationAdmin(login.value,pw.value)">ENTER AS ADMIN</ion-button>
+  </div>
+  </form>
+  </div>
+</ion-content>

@@ -1,0 +1,54 @@
+
+  <ion-header>
+    Ger's Garage
+    <ion-icon name="build-outline"></ion-icon>
+  </ion-header>
+
+  <div class="container">
+    <div class="info-container">
+      <div class="title">All Bookings</div>
+      <div class="items-container">
+        <ion-list>
+          <ion-item *ngFor="let entry of bookings">
+            <div>Id: {{entry.idBooking}}</div>
+            <ion-select (ionChange)='mechanic($event,entry)' placeholder="Mech id: {{entry.idMechanic}}">
+              <ion-select-option *ngFor='let mechanic of mechanics' [value]='mechanic.idMechanic'>{{mechanic.mechanicName}}</ion-select-option>
+            </ion-select>
+            <ion-select (ionChange)='status($event,entry)' placeholder="{{entry.status}}">
+              <ion-select-option *ngFor='let status of statuses' >{{status}}</ion-select-option>
+            </ion-select>
+            <ion-button (click)='save(entry)'>SAVE</ion-button>
+            <ion-button (click)='delete(entry)'>DELETE</ion-button>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+  </div>
+
+
+  <ion-toolbar class='toolbar'>
+    <ion-buttons> 
+    <a routerLink="/admin-bookings">  
+    <ion-button>
+      <ion-icon name="book-outline"></ion-icon>
+    </ion-button>
+    </a>
+    <a routerLink="/admin-mechanics">
+    <ion-button>
+      <ion-icon name="person-outline"></ion-icon>
+    </ion-button>
+    </a>
+    <a routerLink="/admin-home">
+      <ion-button>
+        <ion-icon name="card-outline"></ion-icon>
+      </ion-button>
+      </a>
+    <ion-button>
+      <a routerLink="/admin-store">
+        <ion-icon name="pricetag-outline"></ion-icon>
+      </a>
+    </ion-button>
+    </ion-buttons>
+    </ion-toolbar>
+
+    

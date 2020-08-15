@@ -1,0 +1,14 @@
+<ion-content>
+  <div class="sign-up-container">
+  <form class="demo">
+  <ion-input #name class="sign-up-input" placeholder="Name"></ion-input>
+  <ion-input #phone class="sign-up-input" placeholder="Phone"></ion-input>
+  <ion-input #login class="sign-up-input" placeholder="Login"></ion-input>
+  <ion-input #password type="password" class="sign-up-input" placeholder="Password"></ion-input>
+  <div class="container-button">
+      <ion-button class="sign-up-button" (click)="sendSignUpInformation(name.value,phone.value,login.value,password.value)">SUBMIT</ion-button>
+     <a routerLink="/login"> <ion-button class="sign-up-button" >SIGN IN</ion-button> </a>
+  </div>
+  </form>
+  </div>
+</ion-content>
