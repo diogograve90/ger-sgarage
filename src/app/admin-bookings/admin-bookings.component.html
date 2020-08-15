@@ -8,7 +8,7 @@
     <div class="info-container">
       <div class="title">All Bookings</div>
       <div class="items-container">
-
+        <ion-list>
           <ion-item *ngFor="let entry of bookings">
             <div>Id: {{entry.idBooking}}</div>
             <ion-select (ionChange)='mechanic($event,entry)' placeholder="Mech id: {{entry.idMechanic}}">
